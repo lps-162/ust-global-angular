@@ -1,0 +1,75 @@
+<h3>
+    {{ title }}
+</h3>
+
+Number of employees: {{ numOfEmployess }}
+
+<hr>
+<h3>Employee Details</h3>
+
+Emp No: {{ employee.emp_no }}
+<br>
+First Name: {{ employee.first_name }}
+<br>
+Last Name: {{ employee.last_name }}
+<br>
+Cities: {{ employee.cities }}
+<br>
+{{ employee | json }}
+<br>
+<br>
+City name: <input type="text" [(ngModel)]="cityName" />
+<input type="submit" value="Test 2way data binding" (click)="testCity()" />
+
+<hr>
+List of Employees
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Emp No </th>
+            <th>First name</th>
+            <th>Last name </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of listOfEmployees">
+            <td>{{employee.emp_no}}</td>
+            <td>{{employee.first_name}}</td>
+            <td>{{employee.last_name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>List of Actors </h3>
+<ul>
+    <li *ngFor="let actorName of actors">
+        {{ actorName }}
+    </li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
