@@ -1,7 +1,28 @@
-Root of Angular app
-
-<app-home></app-home>
+<!--<app-home></app-home>
 
 <app-about></app-about>
 
-<employees></employees>
+<employees></employees>-->
+
+<hr>
+<h3>
+    List of Employees
+</h3>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Emp No </th>
+            <th>First name</th>
+            <th>Last name </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of listOfEmployees">
+            <td>{{employee.emp_no}}</td>
+            <td>{{employee.first_name}}</td>
+            <td>{{employee.last_name}}</td>
+        </tr>
+    </tbody>
+</table>
