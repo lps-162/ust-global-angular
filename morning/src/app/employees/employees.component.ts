@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from '../shared/models/employee';
 
 @Component({
     selector: 'employees',
@@ -16,29 +17,33 @@ export class EmployeesComponent {
   myBoolean: boolean;
 
 
-  employee = {
+  employee: Employee = {
     emp_no: 155,
     first_name: 'LP Shivan',
-    last_name: 'Shambavan'
+    last_name: 'Shambavan',
+    city: 'Bangalore'
   };
 
   actors = ['Dulqar', 'Rock', 'Deepika'];
 
-  listOfEmployees = [
+  listOfEmployees: Employee[] = [
     {
       emp_no: 1234,
       first_name: 'LP Shivan',
-      last_name: 'Shambavan'
+      last_name: 'Shambavan',
+      city: 'Bangalore'
     },
     {
       emp_no: 1455,
       first_name: 'Kavitha',
-      last_name: 'Lakshmi'
+      last_name: 'Lakshmi',
+      city: 'Trivandrum'
     },
     {
       emp_no: 1678,
       first_name: 'LP Venkat',
-      last_name: 'Sambhavan'
+      last_name: 'Sambhavan',
+      city: 'Chennai'
     },
   ];
 
