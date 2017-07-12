@@ -16,6 +16,8 @@ export class AppComponent {
     city: 'Delhi'
   };
 
+  selectedEmployee: Employee;
+
   listOfEmployees: Employee[] = [
         {
             emp_no: 156,
@@ -36,4 +38,9 @@ export class AppComponent {
             city: 'Tokyo'
         },
     ];
+
+    showEmployeeDetails(employee: Employee) {
+        console.log(employee);
+        this.selectedEmployee = employee;
+    }
 }

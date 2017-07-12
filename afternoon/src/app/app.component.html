@@ -19,7 +19,9 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let employee of listOfEmployees">
+        <tr *ngFor="let employee of listOfEmployees"
+            (click)="showEmployeeDetails(employee)"
+            [class.active]="selectedEmployee === employee">
             <td>{{employee.emp_no}}</td>
             <td>{{employee.first_name}}</td>
             <td>{{employee.last_name}}</td>
@@ -27,7 +29,7 @@
     </tbody>
 </table>
 
-<employee-details [employee]="employeeFromAppComponent">
+<employee-details [employee]="selectedEmployee">
     
 </employee-details>
 
