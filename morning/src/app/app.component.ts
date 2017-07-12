@@ -30,5 +30,17 @@ export class AppComponent {
     },
   ];
 
-  
+   employeeFromAppComponent: Employee = {
+    emp_no: 155,
+    first_name: 'LP Shivan',
+    last_name: 'Shambavan',
+    city: 'Bangalore'
+  };
+
+  selectedEmployee: Employee;
+
+  showEmployee(employee: Employee) {
+    console.log(employee);
+    this.selectedEmployee = employee;
+  }
 }
