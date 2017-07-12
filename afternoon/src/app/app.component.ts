@@ -9,6 +9,13 @@ import { Employee } from "app/shared/models/employee";
 export class AppComponent {
   title = 'Super cool apps with Angular and Node.js';
 
+  employeeFromAppComponent: Employee = {
+    emp_no: 156,
+    first_name: 'LP Shivan',
+    last_name: 'Shambavan',
+    city: 'Delhi'
+  };
+
   listOfEmployees: Employee[] = [
         {
             emp_no: 156,
