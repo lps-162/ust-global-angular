@@ -21,7 +21,8 @@
     </thead>
     <tbody>
         <tr *ngFor="let employee of listOfEmployees" 
-            (click)="showEmployee(employee)">
+            (click)="showEmployee(employee)"
+            [class.active]="employee === selectedEmployee">
             <td>{{ employee.emp_no }}</td>
             <td>{{ employee.first_name }}</td>
             <td>{{ employee.last_name }}</td>

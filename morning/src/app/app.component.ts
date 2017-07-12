@@ -43,4 +43,8 @@ export class AppComponent {
     console.log(employee);
     this.selectedEmployee = employee;
   }
+
+  chosenStyle = {
+    active: false
+  };
 }
