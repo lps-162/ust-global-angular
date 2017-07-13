@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from "app/shared/models/employee";
+import { listOfMockEmployees } from './shared/mock-data/mock-employees';
 
 @Component({
   selector: 'app-root',
@@ -18,29 +19,26 @@ export class AppComponent {
 
   selectedEmployee: Employee;
 
-  listOfEmployees: any[] = [
-        {
-            emp_no: 156,
-            first_name: 'LP Shivan',
-            last_name: 'Shambavan',
-            city: 'Trivandrum'
-        },
-        {
-            emp_no: 178,
-            first_name: 'Kavitha',
-            last_name: 'Lakshmi',
-            city: 'Los Angeles'
-        },
-        {
-            emp_no: 201,
-            first_name: 'Alexandra',
-            last_name: 'Daddario',
-            city: 'Tokyo'
-        },
-    ];
+    gridData: Employee[] = listOfMockEmployees;
 
     showEmployeeDetails(employee: Employee) {
         console.log(employee);
         this.selectedEmployee = employee;
+    }
+
+    themeObject = {
+      redTheme: false,
+      blueTheme: true,
+      boldFontStyle: true
+    };
+
+    toggleTheme() {
+      if (this.themeObject.redTheme) {
+        this.themeObject.blueTheme = true;
+        this.themeObject.redTheme = false;
+      } else {
+        this.themeObject.blueTheme = false;
+        this.themeObject.redTheme = true;
+      }
     }
 }

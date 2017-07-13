@@ -19,7 +19,7 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let employee of listOfEmployees"
+        <tr *ngFor="let employee of gridData"
             (click)="showEmployeeDetails(employee)"
             [class.active]="selectedEmployee === employee">
             <td>{{employee.emp_no}}</td>
@@ -28,6 +28,15 @@
         </tr>
     </tbody>
 </table>
+
+<label [class.blueTheme]="true">Ilayraraja Music is soulful</label>
+<br>
+Demo of ngClass
+<br>
+<label [ngClass]="themeObject">Ilayraraja Music is soulful</label>
+<br>
+<input type="submit" value="Toggle Theme" 
+    (click)="toggleTheme()" />
 
 <employee-details [employee]="selectedEmployee">
     

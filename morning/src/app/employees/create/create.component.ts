@@ -19,5 +19,6 @@ export class CreateEmployeeComponent implements OnInit {
   
   createEmployee() {
     this.employeeCreated.emit(this.newEmployee);
+    this.newEmployee = new Employee();
   }
 }

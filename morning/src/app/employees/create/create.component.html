@@ -2,7 +2,7 @@
   Create Employee
 </h3>
 
-<form>
+<form (submit)="createEmployee()">
   <div class="form-group">
     <label for="">EmpNo</label>
     <input type="text" class="form-control" 
@@ -22,6 +22,5 @@
   </div>
 
   <input type="submit" value="Create Employee" 
-      class="btn btn-sm btn-danger"
-      (click)="createEmployee()">
+      class="btn btn-sm btn-danger">
 </form>
