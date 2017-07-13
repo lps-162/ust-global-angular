@@ -54,4 +54,9 @@ export class AppComponent {
       this.themeObject.pinkTheme = false;
     }
   }
+
+  onEmployeeCreated(eventInfo) {
+    console.log(eventInfo);
+    this.gridData.push(eventInfo);
+  }
 }
