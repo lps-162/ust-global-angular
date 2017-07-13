@@ -18,7 +18,7 @@ export class AppComponent {
 
   selectedEmployee: Employee;
 
-  listOfEmployees: Employee[] = [
+  listOfEmployees: any[] = [
         {
             emp_no: 156,
             first_name: 'LP Shivan',
