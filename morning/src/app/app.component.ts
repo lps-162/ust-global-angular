@@ -28,4 +28,30 @@ export class AppComponent {
   chosenStyle = {
     active: false
   };
+
+  themeObject = {
+    blueTheme: true,
+    pinkTheme: false,
+    coloredFont: true
+  };
+
+  setBlueTheme() {
+    this.themeObject.blueTheme = true;
+    this.themeObject.pinkTheme = false;
+  }
+
+  setPinkTheme() {
+    this.themeObject.pinkTheme = true;
+    this.themeObject.blueTheme = false;
+  }
+
+  toggleTheme() {
+    if (this.themeObject.blueTheme) {
+      this.themeObject.pinkTheme = true;
+      this.themeObject.blueTheme = false;
+    } else {
+      this.themeObject.blueTheme = true;
+      this.themeObject.pinkTheme = false;
+    }
+  }
 }
