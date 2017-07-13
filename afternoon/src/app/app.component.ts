@@ -41,4 +41,9 @@ export class AppComponent {
         this.themeObject.redTheme = true;
       }
     }
+
+    handleEmployeeCreation(eventInfo) {
+      console.log('Parent : ', eventInfo);
+      this.gridData.push(eventInfo);
+    }
 }
