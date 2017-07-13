@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Employee } from './shared/models/employee';
+import { listOfEmployees } from './shared/mock-data/employees';
 
 @Component({
   selector: 'app-root',
@@ -8,28 +9,8 @@ import { Employee } from './shared/models/employee';
 })
 export class AppComponent {
   title = 'app';
-
-  listOfEmployees: Employee[] = [
-    {
-      emp_no: 1234,
-      first_name: 'LP Shivan',
-      last_name: 'Shambavan',
-      city: 'Bangalore'
-    },
-    {
-      emp_no: 1455,
-      first_name: 'Kavitha',
-      last_name: 'Lakshmi',
-      city: 'Trivandrum'
-    },
-    {
-      emp_no: 1678,
-      first_name: 'LP Venkat',
-      last_name: 'Sambhavan',
-      city: 'Chennai'
-    },
-  ];
-
+  gridData: Employee[] = listOfEmployees;
+  
    employeeFromAppComponent: Employee = {
     emp_no: 155,
     first_name: 'LP Shivan',

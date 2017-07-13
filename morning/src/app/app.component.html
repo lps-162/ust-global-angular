@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of listOfEmployees" 
+        <tr *ngFor="let employee of gridData" 
             (click)="showEmployee(employee)"
             [class.active]="employee === selectedEmployee">
             <td>{{ employee.emp_no }}</td>
