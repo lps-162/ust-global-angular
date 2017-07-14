@@ -1,33 +1,7 @@
 <h3>
-    {{ title }}
+  List of Employees
 </h3>
 
-{{ numberOfEmployees }}
-
-{{ myNumber }}
-
-<hr>
-Employee Details:
-<hr>
-Employee No: {{ employee.emp_no }}
-<br>
-First name: {{ employee.first_name }}
-<br>
-Last name: {{ employee.last_name }}
-
-<hr>
-Actors
-<hr>
-
-<ul>
-    <li *ngFor="let actor of actors">
-        {{ actor }}
-    </li>
-</ul>
-
-<hr>
-Table of Employees
-<hr>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -37,36 +11,10 @@ Table of Employees
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of listOfEmployees">
+        <tr *ngFor="let employee of gridData" >
             <td>{{ employee.emp_no }}</td>
             <td>{{ employee.first_name }}</td>
             <td>{{ employee.last_name }}</td>
         </tr>
     </tbody>
 </table>
-
-<hr>
-Data Binding
-<br>
-{{ cityName }}
-<br>
-Change City : <input type="text" [(ngModel)]="cityName"/>
-
-<input type="submit" (click)="submit()">
-
-<br>
-<br>
-<br>
-
-<hr>
-2-way data binding with objects
-<br>
-{{ employee | json }}
-<br>
-<input type="text" [(ngModel)]="employee.emp_no"/>
-<input type="text" [(ngModel)]="employee.first_name"/>
-<input type="text" [(ngModel)]="employee.last_name"/>
-
-<br>
-<br>
-<br>

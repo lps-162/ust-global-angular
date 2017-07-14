@@ -6,8 +6,24 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { CreateEmployeeComponent } from './employees/create/create.component';
-import { EmployeeDetailsComponent } from './employees/details/details.component';
+
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
+
+const appRoutes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'employees',
+    component: EmployeesComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -15,12 +31,12 @@ import { EmployeeDetailsComponent } from './employees/details/details.component'
     HomeComponent,
     AboutComponent,
     EmployeesComponent,
-    CreateEmployeeComponent,
-    EmployeeDetailsComponent
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

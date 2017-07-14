@@ -1,64 +1,18 @@
-import { Component } from '@angular/core';
-import { Employee } from '../shared/models/employee';
+import { Component, OnInit } from '@angular/core';
+import { Employee } from "app/shared/models/employee";
+import { listOfEmployees } from "app/shared/mock-data/employees";
 
 @Component({
-    selector: 'employees',
-    templateUrl: './employees.component.html',
-    styleUrls: ['./employees.component.css']
-    
+  selector: 'app-employees',
+  templateUrl: './employees.component.html',
+  styleUrls: ['./employees.component.css']
 })
-export class EmployeesComponent {
-  
-  title: string = 'List of Employees';
-  numberOfEmployees: number = 100;
+export class EmployeesComponent implements OnInit {
 
-  myNumber: number = 199;
-  myString: string;
-  myBoolean: boolean;
-
-
-  employee: Employee = {
-    emp_no: 155,
-    first_name: 'LP Shivan',
-    last_name: 'Shambavan',
-    city: 'Bangalore'
-  };
-
-  actors = ['Dulqar', 'Rock', 'Deepika'];
-
-  listOfEmployees: Employee[] = [
-    {
-      emp_no: 1234,
-      first_name: 'LP Shivan',
-      last_name: 'Shambavan',
-      city: 'Bangalore'
-    },
-    {
-      emp_no: 1455,
-      first_name: 'Kavitha',
-      last_name: 'Lakshmi',
-      city: 'Trivandrum'
-    },
-    {
-      emp_no: 1678,
-      first_name: 'LP Venkat',
-      last_name: 'Sambhavan',
-      city: 'Chennai'
-    },
-  ];
-
-  cityName = 'Bangalore';
-
-  constructor() { 
-   
-  }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  submit() {
-    console.log('Somebody clicked');
-    console.log(this.cityName);
-  }
-
+  gridData: Employee[] = listOfEmployees;
 }
