@@ -1,0 +1,16 @@
+tr.active {
+    color: darkorchid;
+    font-weight: bold;
+}
+
+.blueTheme {
+    background: blueviolet;
+}
+
+.redTheme {
+    background: orangered;
+}
+
+.boldFontStyle {
+    font-size: 2.7em;
+}
