@@ -5,6 +5,7 @@ import { AboutComponent } from 'app/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from "app/not-found/not-found.component";
 import { ModuleWithProviders } from '@angular/core';
+import { EmployeeDetailsComponent } from "app/employees/employee-details/employee-details.component";
 
 const appRoutes: Routes = [
   {
@@ -14,6 +15,15 @@ const appRoutes: Routes = [
   {
     path: 'employees',
     component: EmployeesComponent
+  },
+  {
+    path: 'home',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
+  {
+    path: 'employees/:id',
+    component: EmployeeDetailsComponent
   },
   {
     path: 'about',

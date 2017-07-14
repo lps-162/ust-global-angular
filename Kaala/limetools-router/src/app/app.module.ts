@@ -9,6 +9,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { appRouting } from 'app/app.routing';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AboutComponent,
     EmployeesComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
