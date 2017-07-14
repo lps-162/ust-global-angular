@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-details',
@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EmployeeDetailsComponent implements OnInit {
 
-  constructor(private currentRouteInfo: ActivatedRoute) { }
+  constructor(private currentRouteInfo: ActivatedRoute,
+              private router: Router) { }
 
   employeeId;
 
@@ -17,4 +18,7 @@ export class EmployeeDetailsComponent implements OnInit {
     this.employeeId = this.currentRouteInfo.snapshot.params['id'];
   }
 
+  goBack() {
+    this.router.navigate(['/employees']);
+  }
 }
