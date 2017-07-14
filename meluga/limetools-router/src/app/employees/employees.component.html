@@ -8,6 +8,7 @@
             <th>Emp No </th>
             <th>First name</th>
             <th>Last name </th>
+            <th>Actions</th>
         </tr>
     </thead>
 
@@ -16,6 +17,9 @@
             <td>{{employee.emp_no}}</td>
             <td>{{employee.first_name}}</td>
             <td>{{employee.last_name}}</td>
+            <td>
+                <a [routerLink]="['/employees', employee.emp_no]" class="btn btn-sm btn-info">View</a>
+            </td>
         </tr>
     </tbody>
 </table>

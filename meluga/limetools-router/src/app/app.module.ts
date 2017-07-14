@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
 
 const appRoutes = [
   {
@@ -21,6 +23,14 @@ const appRoutes = [
   {
     path: 'employees',
     component: EmployeesComponent
+  },
+  {
+    path: 'employees/:id',
+    component: EmployeeDetailsComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 
@@ -30,7 +40,9 @@ const appRoutes = [
     HomeComponent,
     AboutComponent,
     EmployeesComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotFoundComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
