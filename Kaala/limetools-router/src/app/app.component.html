@@ -1,0 +1,56 @@
+<div>
+    
+    <h3>
+        Super Apps with Angular and Node.js
+    </h3>
+</div>
+
+<!--<app-home></app-home>
+
+<app-about></app-about>
+
+<employees></employees>-->
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Emp No</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of gridData" 
+            (click)="showEmployee(employee)"
+            [class.active]="employee === selectedEmployee">
+            <td>{{ employee.emp_no }}</td>
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="col-md-3">
+    <create-employee (employeeCreated)="onEmployeeCreated($event)"></create-employee>
+</div>
+
+<div class="col-md-3">
+    <employee-details [employee]="selectedEmployee">
+    </employee-details>
+</div>
+
+<br><br>
+
+<label [ngClass]="themeObject">
+    Show me the God
+</label>
+
+<label [class.pinkTheme]="2 === 2">Rock Dwayne Johnson</label>
+
+<br/>
+<input type="submit" (click)="setBlueTheme()" value="Set Blue Theme" />
+<input type="submit" (click)="setPinkTheme()" value="Set Pink Theme" />
+<input type="submit" value="Toggle" (click)="toggleTheme()">
+
+<!--<employee-details [employee]="employeeFromAppComponent">-->

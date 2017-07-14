@@ -1,0 +1,26 @@
+<h3>
+  Create Employee
+</h3>
+
+<form (submit)="createEmployee()">
+  <div class="form-group">
+    <label for="">EmpNo</label>
+    <input type="text" class="form-control" 
+        name="emp_no" [(ngModel)]="newEmployee.emp_no" />
+  </div>
+
+  <div class="form-group">
+    <label for="">First Name</label>
+    <input type="text" class="form-control" 
+      name="first_name" [(ngModel)]="newEmployee.first_name" />
+  </div>
+
+  <div class="form-group">
+    <label for="">Last Name</label>
+    <input type="text" class="form-control"
+       name="last_name" [(ngModel)]="newEmployee.last_name" />
+  </div>
+
+  <input type="submit" value="Create Employee" 
+      class="btn btn-sm btn-danger">
+</form>
