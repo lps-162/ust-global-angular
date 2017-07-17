@@ -3,5 +3,16 @@
 </a>
 
 <h3>
-  Employee Details : {{ employeeId }}
+  Employee Details 
 </h3>
+Emp No: : {{ selectedEmployeeObject.emp_no }}
+<br>
+First Name : : {{ selectedEmployeeObject.first_name }}
+<br>
+Last Name : : {{ selectedEmployeeObject.last_name }}
+<br>
+
+<a class="btn btn-sm btn-info"
+    [routerLink]="['/employees', employeeId, 'edit']">
+  Edit Employee
+</a>

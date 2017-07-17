@@ -4,10 +4,10 @@ import { Employee } from "app/shared/models/employee";
 
 @Component({
   selector: 'app-employees',
-  templateUrl: './employees.component.html',
-  styleUrls: ['./employees.component.css']
+  templateUrl: './employees-list.component.html',
+  styleUrls: ['./employees-list.component.css']
 })
-export class EmployeesComponent implements OnInit {
+export class EmployeesListComponent implements OnInit {
   gridData: Employee[] = listOfMockEmployees;
 
   constructor() { }
