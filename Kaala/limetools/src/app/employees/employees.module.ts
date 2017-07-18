@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from "@angular/common";
+import { HttpModule } from '@angular/http';
 import { employeesRouting } from "app/employees/employees.routing";
 
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
@@ -13,6 +14,7 @@ import { EmployeesListComponent } from './employees-list/employees-list.componen
     imports: [
         CommonModule,
         FormsModule,
+        HttpModule,
         employeesRouting
     ],
     exports: [],
