@@ -11,7 +11,7 @@ import { EmployeesSectionComponent } from "app/employees/employees-section.compo
 
 const employeesRoutes: Routes = [
   {
-    path: 'employees',
+    path: '',
     component: EmployeesSectionComponent,
     children: [
       {
@@ -35,4 +35,4 @@ const employeesRoutes: Routes = [
 ];
 
 export const employeesRouting: ModuleWithProviders = 
-                            RouterModule.forRoot(employeesRoutes);
+                            RouterModule.forChild(employeesRoutes);

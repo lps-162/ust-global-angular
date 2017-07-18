@@ -12,6 +12,10 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'employees',
+    loadChildren: 'app/employees/employees.module#EmployeesModule'
+  },
+  {
     path: 'home',
     redirectTo: '',
     pathMatch: 'full'

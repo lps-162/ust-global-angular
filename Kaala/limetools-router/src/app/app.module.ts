@@ -22,7 +22,6 @@ import { EmployeesModule } from "app/employees/employees.module";
   imports: [
     BrowserModule,
     FormsModule,
-    EmployeesModule,
     appRouting
   ],
   providers: [],
