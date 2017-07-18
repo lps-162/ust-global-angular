@@ -1,0 +1,15 @@
+.active {
+    color: violet;
+}
+
+.blueTheme {
+    background: lightblue;
+}
+
+.pinkTheme {
+    background: pink;
+}
+
+.coloredFont {
+    color: red;
+}

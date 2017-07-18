@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            body {
+                background: bisque
+            }
+
+            h1 {
+                color: aqua;
+            }
+
+            .activeButton {
+                color: green;
+                background: pink;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>
+            Simplest Hello world
+            <input type="submit" value="Hello Shivan" style="color: red; background: blue;"/>
+
+            <br/>
+            Css classed  Button
+            <input type="submit" [ngClass]="myStyleProperty" />
+
+             <input type="submit" class="active1" />
+              <input type="submit" class="active1" />
+        </h1>
+    </body>
+</html>

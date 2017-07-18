@@ -1,0 +1,11 @@
+<a (click)="goBack()" class="btn btn-sm btn-info">
+  Go Back
+</a>
+
+<h3>
+  Employee Details With Id : {{ employeeId }}
+</h3>
+
+<a class="btn btn-sm btn-info" [routerLink]="['/employees', employeeId, 'edit']">
+  Edit Details
+</a>
