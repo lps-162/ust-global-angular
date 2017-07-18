@@ -22,9 +22,7 @@ import { EmployeesModule } from "app/employees/employees.module";
   imports: [
     BrowserModule,
     FormsModule,
-    appRouting,
-
-    EmployeesModule
+    appRouting
   ],
   providers: [],
   bootstrap: [AppComponent]
