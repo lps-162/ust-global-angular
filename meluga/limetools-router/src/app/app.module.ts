@@ -9,12 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { appRouting } from "app/app.routing";
-
-import { EmployeesListComponent } from './employees/employees-list/employees-list.component';
-import { EmployeeDetailsComponent } from './employees/employee-details/employee-details.component';
-import { EmployeesCreateComponent } from './employees/employees-create/employees-create.component';
-import { EmployeesEditComponent } from './employees/employees-edit/employees-edit.component';
-import { EmployeesSectionComponent } from "app/employees/employees-section.component";
+import { EmployeesModule } from "app/employees/employees.module";
 
 @NgModule({
   declarations: [
@@ -22,18 +17,14 @@ import { EmployeesSectionComponent } from "app/employees/employees-section.compo
     HomeComponent,
     AboutComponent,
     NavbarComponent,
-    NotFoundComponent,
-
-  EmployeesSectionComponent,
-    EmployeesListComponent,
-    EmployeeDetailsComponent,
-    EmployeesCreateComponent,
-    EmployeesEditComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    appRouting
+    appRouting,
+
+    EmployeesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
