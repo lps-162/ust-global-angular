@@ -8,7 +8,6 @@ import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { appRouting } from 'app/app.routing';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { EmployeesModule } from "app/employees/employees.module";
 
 @NgModule({
   declarations: [
