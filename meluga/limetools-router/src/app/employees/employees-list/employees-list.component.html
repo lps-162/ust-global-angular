@@ -9,6 +9,7 @@
 <table class="table table-bordered">
     <thead>
         <tr>
+            <th>Id </th>
             <th>Emp No </th>
             <th>First name</th>
             <th>Last name </th>
@@ -18,6 +19,7 @@
 
     <tbody>
         <tr *ngFor="let employee of gridData">
+            <td>{{employee.id}}</td>
             <td>{{employee.emp_no}}</td>
             <td>{{employee.first_name}}</td>
             <td>{{employee.last_name}}</td>
