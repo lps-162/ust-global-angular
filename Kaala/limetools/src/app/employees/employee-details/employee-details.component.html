@@ -1,4 +1,5 @@
-<a (click)="goBack()" class="btn btn-sm btn-info">
+<div *ngIf="employee">
+  <a (click)="goBack()" class="btn btn-sm btn-info">
   Go Back
 </a>
 
@@ -18,3 +19,4 @@ Last Name: {{ employee.last_name }}
 <a class="btn btn-sm btn-info" [routerLink]="['/employees', employeeId, 'edit']">
   Edit Details
 </a>
+</div>

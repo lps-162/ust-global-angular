@@ -20,7 +20,7 @@ export class EmployeeDetailsComponent implements OnInit {
     const employeeId = this.currentRouteStuffs.snapshot.params['id'];
 
     this.service.getEmployeeDetails(employeeId)
-      .subscribe(response => this.employee = response.json());
+      .subscribe(employee => this.employee = employee);
   }
 
   goBack() {
