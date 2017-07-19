@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 
 import { EmployeesListComponent } from './employees-list/employees-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
@@ -12,6 +13,7 @@ import { employeesRouting } from "app/employees/employees.routing";
 @NgModule({
   imports: [
     CommonModule,
+    HttpModule,
     employeesRouting
   ],
   declarations: [
