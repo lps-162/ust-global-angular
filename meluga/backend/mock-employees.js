@@ -1,7 +1,7 @@
 const faker = require('faker');
 
 let listOfEmployees = [];
-for (let i=0; i<10; i++) {
+for (let i=0; i<3; i++) {
     let newEmpObj = {
         id: faker.random.number(1000),
         emp_no: faker.random.alphaNumeric(6),
