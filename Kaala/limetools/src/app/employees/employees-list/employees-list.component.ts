@@ -10,14 +10,10 @@ import { EmployeesService } from "app/shared/services/employees.service";
 })
 export class EmployeesListComponent implements OnInit {
 
-  constructor(private http: Http, 
-              private service: EmployeesService) { }
+  constructor(private service: EmployeesService) { }
 
   ngOnInit() {
-    this.service.getEmployees();
-    
-    const employeesUrl = 'http://localhost:3000/api/employees';
-    this.http.get(employeesUrl).subscribe(response => this.gridData = response.json());
+    this.service.getEmployees().subscribe(response => this.gridData = response.json());
   }
 
   gridData: Employee[];

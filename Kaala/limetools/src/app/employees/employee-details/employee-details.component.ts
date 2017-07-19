@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { EmployeesService } from "app/shared/services/employees.service";
+import { Employee } from "app/shared/models/employee";
 
 @Component({
   selector: 'app-employee-details',
@@ -7,14 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
-  employeeId: string;
+  employee: Employee;
 
   constructor(private currentRouteStuffs: ActivatedRoute, 
-              private router: Router) { }
+              private router: Router,
+              private service: EmployeesService) { }
 
   ngOnInit() {
     console.log('Employee id : ' , this.currentRouteStuffs.snapshot.params['id']);
-    this.employeeId =  this.currentRouteStuffs.snapshot.params['id'];
+    const employeeId = this.currentRouteStuffs.snapshot.params['id'];
+
+    this.service.getEmployeeDetails(employeeId)
+      .subscribe(response => this.employee = response.json());
   }
 
   goBack() {
