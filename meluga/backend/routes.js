@@ -12,7 +12,7 @@ employeesRouter.get('/api/employees/:id', (req, res) => {
 
     const selectedEmployee = listOfEmployees.find(e => e.id === employeeId);
     res.send(selectedEmployee);
-})
+});
 
 module.exports = employeesRouter;
 

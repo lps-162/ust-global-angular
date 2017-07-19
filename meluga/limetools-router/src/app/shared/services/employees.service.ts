@@ -14,4 +14,16 @@ export class EmployeesService {
       .map(serverResponse => serverResponse.json());
   }
 
+  getEmployeeDetails(id) {
+    const fetchUrl = `${this.employeesUrl}/${id}`;
+    console.log(fetchUrl);
+
+    return this.http.get(fetchUrl)
+      .map(serverResponse => serverResponse.json());
+  }
+
+  createEmployee() {
+
+  }
+
 }
