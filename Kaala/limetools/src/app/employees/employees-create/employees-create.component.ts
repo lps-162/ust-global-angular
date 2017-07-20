@@ -9,12 +9,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./employees-create.component.css']
 })
 export class EmployeesCreateComponent implements OnInit {
-  newEmployee: Employee = {
-    emp_no: 0,
-    first_name: '',
-    last_name: '',
-    city: ''
-  };
+  newEmployee: Employee = new Employee();
 
   successMessage = '';
   

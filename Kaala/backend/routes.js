@@ -28,5 +28,12 @@ employeesRouter.post('/api/employees', (req, res) => {
     
 });
 
+employeesRouter.put('/api/employees/:id', (req, res) => {
+    const employeeToBeUpdated = req.body;
+
+    res.status(200).send(employeeToBeUpdated);
+    
+});
+
 module.exports = employeesRouter;
 

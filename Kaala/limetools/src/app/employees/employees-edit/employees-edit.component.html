@@ -1,3 +1,28 @@
 <h3>
-  Edit Employee details - {{ employeeId }}
+  Edit Employee details - {{ newEmployee.id }}
 </h3>
+<div class="alert alert-success" *ngIf="successMessage">
+  {{ successMessage }}
+</div>
+
+<form (ngSubmit)="updateEmployee()">
+  <div class="form-group">
+    <label for="">EmpNo</label>
+    <input type="text" class="form-control" 
+        name="emp_no" [(ngModel)]="newEmployee.emp_no" />
+  </div>
+
+  <div class="form-group">
+    <label for="">First Name</label>
+    <input type="text" class="form-control" 
+      name="first_name" [(ngModel)]="newEmployee.first_name" />
+  </div>
+
+  <div class="form-group">
+    <label for="">Last Name</label>
+    <input type="text" class="form-control"
+       name="last_name" [(ngModel)]="newEmployee.last_name" />
+  </div>
+
+  <button class="btn btn-sm btn-success">Update Employee</button>
+</form>

@@ -1,22 +1,23 @@
 <div *ngIf="employee">
-  <a (click)="goBack()" class="btn btn-sm btn-info">
-  Go Back
-</a>
+    <a (click)="goBack()" class="btn btn-sm btn-info">
+    Go Back
+  </a>
 
-<h3>
-  Employee Details With Id : {{ employee.id }}
-</h3>
-<br>  
-Emp No: {{ employee.emp_no }}
-<br>
-First Name: {{ employee.first_name }}
-<br>
-Last Name: {{ employee.last_name }}
-<br>
-<!--<img [src]="employee.photo_url" class="img-thumbnail img-rounded" alt="">-->
-<br>
+  <h3>
+    Employee Details With Id : {{ employee.id }}
+  </h3>
+  <br>  
+  Emp No: {{ employee.emp_no }}
+  <br>
+  First Name: {{ employee.first_name }}
+  <br>
+  Last Name: {{ employee.last_name }}
+  <br>
+  Full Name: {{ employee.full_name }}
+  <!--<img [src]="employee.photo_url" class="img-thumbnail img-rounded" alt="">-->
+  <br>
 
-<a class="btn btn-sm btn-info" [routerLink]="['/employees', employeeId, 'edit']">
-  Edit Details
-</a>
+  <a class="btn btn-sm btn-info" [routerLink]="['/employees', employee.id, 'edit']">
+    Edit Details
+  </a>
 </div>
