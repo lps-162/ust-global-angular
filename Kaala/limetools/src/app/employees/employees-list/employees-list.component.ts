@@ -9,12 +9,20 @@ import { EmployeesService } from "app/shared/services/employees.service";
   styleUrls: ['./employees-list.component.css']
 })
 export class EmployeesListComponent implements OnInit {
+  errorMessage;
 
   constructor(private service: EmployeesService) { }
 
   ngOnInit() {
     this.service.getEmployees()
-      .subscribe(employees => this.gridData = employees);
+      .subscribe(employees => {
+        this.errorMessage = '';
+        this.gridData = employees;
+      },
+      err => {
+        this.errorMessage = err;
+        console.log('From List Component : ', err)
+      });
   }
 
   gridData: Employee[];

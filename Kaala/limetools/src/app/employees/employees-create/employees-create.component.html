@@ -1,8 +1,12 @@
+<div class="alert alert-success" *ngIf="successMessage">
+  {{ successMessage }}
+</div>
+
 <h3>
   Create a New Employee
 </h3>
 
-<form (submit)="createEmployee()">
+<form (ngSubmit)="createEmployee()">
   <div class="form-group">
     <label for="">EmpNo</label>
     <input type="text" class="form-control" 
@@ -21,5 +25,5 @@
        name="last_name" [(ngModel)]="newEmployee.last_name" />
   </div>
 
-  <button>Create Employee</button>
+  <button class="btn btn-sm btn-success">Create Employee</button>
 </form>
