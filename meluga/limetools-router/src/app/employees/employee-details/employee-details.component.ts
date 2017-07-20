@@ -24,7 +24,10 @@ export class EmployeeDetailsComponent implements OnInit {
     let empIdInteger = parseInt(this.employeeId);
     //this.selectedEmployeeObject = listOfMockEmployees.find(emp => emp.emp_no == empIdInteger);
     this.service.getEmployeeDetails(this.employeeId)
-      .subscribe(employee => this.selectedEmployeeObject = employee)
+      .subscribe(employee => {
+        console.log(employee);
+        this.selectedEmployeeObject = employee;
+      });
   }
 
   goBack() {

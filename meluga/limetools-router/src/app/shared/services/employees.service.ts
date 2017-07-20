@@ -8,6 +8,7 @@ import 'rxjs/add/operator/toPromise';
 
 import 'rxjs/add/observable/throw';
 import { Observable } from "rxjs/Observable";
+import { Employee } from "app/shared/models/employee";
 
 
 @Injectable()
@@ -20,19 +21,32 @@ export class EmployeesService {
     return Observable.throw('Internal Server Error ' + err.status);
   }
 
-  getEmployees() {
+  private formatEmployee(jsonResponse) {
+    let employee = new Employee();
+    employee.id = jsonResponse.id;
+    employee.first_name = jsonResponse.first_name;
+    employee.last_name = jsonResponse.last_name;
+    employee.emp_no = jsonResponse.emp_no;
+    employee.city = jsonResponse.city;
+    employee.full_name = employee.first_name + ' ' + employee.last_name;
+
+    return employee;
+  }
+
+  getEmployees(): Observable<Employee[]> {
     return this.http.get(this.employeesUrl)
       .map(serverResponse => serverResponse.json())
-      .do(response => console.log('Do operation', response))
+      .map(employees => employees.map(this.formatEmployee))
       .catch(this.handleError);
   }
 
-  getEmployeeDetails(id) {
+  getEmployeeDetails(id) : Observable<Employee> {
     const fetchUrl = `${this.employeesUrl}/${id}`;
     console.log(fetchUrl);
 
     return this.http.get(fetchUrl)
       .map(serverResponse => serverResponse.json())
+      .map(this.formatEmployee)
       .catch(this.handleError);
   }
 
