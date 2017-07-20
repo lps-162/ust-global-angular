@@ -16,7 +16,8 @@ export class EmployeesListComponent implements OnInit {
   ngOnInit() {
 
       this.service.getEmployees()
-        .subscribe(dd => this.gridData = dd);
+        .subscribe(dd => this.gridData = dd,
+                  err => console.log(err));
   }
 
 

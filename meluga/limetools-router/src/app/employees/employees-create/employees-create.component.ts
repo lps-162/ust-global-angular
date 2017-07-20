@@ -10,7 +10,8 @@ import { Router } from "@angular/router";
 })
 export class EmployeesCreateComponent implements OnInit {
   newEmployee: Employee = new Employee();
-  
+  successMessage;
+
   constructor(private service: EmployeesService, 
               private router: Router) { }
 
@@ -22,7 +23,8 @@ export class EmployeesCreateComponent implements OnInit {
     console.log(this.newEmployee);
     this.service.createEmployee(this.newEmployee)
       .subscribe(employee => {
-        this.router.navigate(['/employees', employee.id]);
+        //this.router.navigate(['/employees', employee.id]);
+        this.successMessage = 'Employee Created Succesfully';
       });
   }
 }
