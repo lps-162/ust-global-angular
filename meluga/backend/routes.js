@@ -18,9 +18,9 @@ employeesRouter.get('/api/employees/:id', (req, res) => {
 employeesRouter.post('/api/employees', (req, res) => {
     const newEmployeeObject = req.body;
     console.log(newEmployeeObject);
-    res.send('Create employee');
     newEmployeeObject.id = faker.random.number(1000);
     listOfEmployees.push(newEmployeeObject);
+    res.status(201).send(newEmployeeObject);
 });
 
 module.exports = employeesRouter;

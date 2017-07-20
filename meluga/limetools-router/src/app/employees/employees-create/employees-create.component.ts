@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from "app/shared/models/employee";
+import { EmployeesService } from "app/shared/services/employees.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-employees-create',
@@ -9,13 +11,18 @@ import { Employee } from "app/shared/models/employee";
 export class EmployeesCreateComponent implements OnInit {
   newEmployee: Employee = new Employee();
   
-  constructor() { }
+  constructor(private service: EmployeesService, 
+              private router: Router) { }
 
   ngOnInit() {
   }
 
   createEmployee() {
     console.log('Create Employee - talk to service');
-
+    console.log(this.newEmployee);
+    this.service.createEmployee(this.newEmployee)
+      .subscribe(employee => {
+        this.router.navigate(['/employees', employee.id]);
+      });
   }
 }
