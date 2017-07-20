@@ -10,7 +10,7 @@ import { Employee } from "app/shared/models/employee";
 
 @Injectable()
 export class EmployeesService {
-  employeesUrl = 'http://localhost:3000/api/employees234234';
+  employeesUrl = 'http://localhost:3000/api/employees';
 
   constructor(private http: Http) { }
 
