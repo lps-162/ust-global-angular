@@ -9,6 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { appRouting } from 'app/app.routing';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EmployeesModule } from "app/employees/employees.module";
+import { LoginComponent } from './login/login.component';
+import { AuthService } from "app/shared/services/auth.service";
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { EmployeesModule } from "app/employees/employees.module";
     AboutComponent,
     NavbarComponent,
     NotFoundComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -25,7 +28,7 @@ import { EmployeesModule } from "app/employees/employees.module";
     EmployeesModule,
     appRouting
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

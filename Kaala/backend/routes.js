@@ -35,5 +35,16 @@ employeesRouter.put('/api/employees/:id', (req, res) => {
     
 });
 
+employeesRouter.post('/api/login', (req, res) => {
+    const credentials = req.body;
+    console.log(credentials);
+    if (credentials.username = 'rock' && credentials.password == 'rock')
+    {
+        return {
+            token: 'ALHI9u9u9u'
+        }
+    }
+});
+
 module.exports = employeesRouter;
 

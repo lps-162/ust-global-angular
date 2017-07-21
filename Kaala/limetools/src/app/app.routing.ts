@@ -4,6 +4,7 @@ import { AboutComponent } from 'app/about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from "app/not-found/not-found.component";
 import { ModuleWithProviders } from '@angular/core';
+import { LoginComponent } from "app/login/login.component";
 
 
 const appRoutes: Routes = [
@@ -19,6 +20,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '**',
