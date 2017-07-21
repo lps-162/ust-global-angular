@@ -1,38 +1,26 @@
-<div class="alert-alert-success" *ngIf="successMessage">
-  {{ successMessage }}
-</div>
-
 <h3>
-  Create New Employe
+  Create Employee
 </h3>
-<form (ngSubmit)="createEmployee()" #createForm="ngForm">
-  {{ createForm.valid }}
+
+<form (submit)="createEmployee()" [formGroup]="createForm">
   <div class="form-group">
     <label>Emp No</label>
     <input type="text" class="form-control" name="emp_no"
-      [(ngModel)]="newEmployee.emp_no" 
-      required #empNo="ngModel" />
+      formControlName="emp_no" />
   </div>
 
-  <div class="form-group" [ngClass]="{ 'has-error': firstName.touched && firstName.invalid }">
+  <div class="form-group">
     <label>First Name</label>
     <input type="text" class="form-control" name="first_name"
-      [(ngModel)]="newEmployee.first_name" 
-      required #firstName="ngModel" />
-      {{ firstName.className }}
-      <span *ngIf="firstName.touched && firstName.invalid">
-          Firstname is required
-      </span>
+      formControlName="first_name" />
   </div>
 
-  <div class="form-group" [ngClass]="{ 'has-error': lastName.touched && lastName.invalid }">
+  <div class="form-group">
     <label>Last Name</label>
     <input type="text" class="form-control" name="last_name"
-      [(ngModel)]="newEmployee.last_name" 
-      required #lastName="ngModel" />
+      formControlName="last_name" />
   </div>
 
   <input type="submit" value="Create Employee" 
-    class="btn btn-sm btn-info" 
-    [disabled]="!createForm.valid" />
+    class="btn btn-sm btn-info" />
 </form>
