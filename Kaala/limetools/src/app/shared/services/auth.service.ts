@@ -10,5 +10,4 @@ export class AuthService {
     return this.http.post('/api/login', credentials)
         .map(response => response.json());
   }
-
 }
