@@ -10,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { appRouting } from "app/app.routing";
 import { EmployeesModule } from "app/employees/employees.module";
+import { LoginComponent } from './login/login.component';
+import { AuthService } from "app/shared/services/auth.service";
 
 @NgModule({
   declarations: [
@@ -17,14 +19,15 @@ import { EmployeesModule } from "app/employees/employees.module";
     HomeComponent,
     AboutComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     appRouting
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

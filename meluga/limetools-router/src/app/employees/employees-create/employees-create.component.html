@@ -9,16 +9,25 @@
       formControlName="emp_no" />
   </div>
 
-  <div class="form-group">
+  <div class="form-group" 
+    [ngClass]="{ 'has-error': firstNameError }">
     <label>First Name</label>
     <input type="text" class="form-control" name="first_name"
       formControlName="first_name" />
+
+    <span class="help-block" *ngIf="formErrors.firstName">
+      {{ formErrors.firstName }}
+    </span>
   </div>
 
   <div class="form-group">
     <label>Last Name</label>
     <input type="text" class="form-control" name="last_name"
       formControlName="last_name" />
+
+      <span class="help-block" *ngIf="formErrors.lastName">
+      {{ formErrors.lastName }}
+    </span>
   </div>
 
   <input type="submit" value="Create Employee" 
