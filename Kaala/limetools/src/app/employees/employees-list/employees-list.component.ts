@@ -14,6 +14,7 @@ export class EmployeesListComponent implements OnInit {
   constructor(private service: EmployeesService) { }
 
   ngOnInit() {
+    debugger;
     this.service.getEmployees()
       .subscribe(employees => {
         this.errorMessage = '';

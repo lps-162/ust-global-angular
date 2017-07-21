@@ -14,8 +14,8 @@
     <input type="text" class="form-control" 
       name="first_name" formControlName="first_name" required/>
 
-    <span class="help-block" *ngIf="firstNameError">
-      {{ firstNameError }}
+    <span class="help-block" *ngIf="formErrors.first_name">
+      {{ formErrors.first_name }}
     </span>
   </div>
 
@@ -24,8 +24,8 @@
     <input type="text" class="form-control"
        name="last_name" formControlName="last_name" required />
 
-    <span class="help-block" *ngIf="lastNameError">
-      {{ lastNameError }}
+    <span class="help-block" *ngIf="formErrors.last_name">
+      {{ formErrors.last_name }}
     </span>
   </div>
 
