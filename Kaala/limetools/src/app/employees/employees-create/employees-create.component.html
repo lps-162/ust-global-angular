@@ -1,45 +1,34 @@
-<div class="alert alert-success" *ngIf="successMessage">
-  {{ successMessage }}
-</div>
-
 <h3>
-  Create a New Employee
+  Create Employee
 </h3>
 
-<form (ngSubmit)="createEmployee()" #createForm="ngForm">
+<form (submit)="createEmployee()" [formGroup]="createForm">
   <div class="form-group">
     <label for="">EmpNo</label>
     <input type="text" class="form-control" 
-        name="emp_no" [(ngModel)]="newEmployee.emp_no" 
-        required #empNo="ngModel" />
-    <span *ngIf="empNo.touched && empNo.invalid">
-        Emp No is required
-    </span>
+        name="emp_no" formControlName="emp_no" />
   </div>
 
-  <div class="form-group" [ngClass]="{ 'has-error': firstName.touched && firstName.invalid }">
+  <div class="form-group">
     <label for="">First Name</label>
-    <input type="text" class="form-control"
-      name="first_name" [(ngModel)]="newEmployee.first_name" 
-      required #firstName="ngModel"/>
-    <label *ngIf="firstName.touched && firstName.invalid">
-        FirstName is required
-    </label>
+    <input type="text" class="form-control" 
+      name="first_name" formControlName="first_name" required/>
+
+    <span class="help-block" *ngIf="firstNameError">
+      {{ firstNameError }}
+    </span>
   </div>
 
   <div class="form-group">
     <label for="">Last Name</label>
     <input type="text" class="form-control"
-       name="last_name" [(ngModel)]="newEmployee.last_name" 
-       required #lastName="ngModel" />
-    <span *ngIf="lastName.touched && lastName.invalid">
-        LastName is required
+       name="last_name" formControlName="last_name" required />
+
+    <span class="help-block" *ngIf="lastNameError">
+      {{ lastNameError }}
     </span>
   </div>
 
-  {{ createForm.valid }}
-
-  <button class="btn btn-sm btn-success" [disabled]="!createForm.valid">
-    Create Employee
-  </button>
+  <input type="submit" value="Create Employee" 
+      class="btn btn-sm btn-danger">
 </form>

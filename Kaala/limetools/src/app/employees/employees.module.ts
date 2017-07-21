@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from "@angular/common";
 import { HttpModule } from '@angular/http';
 import { employeesRouting } from "app/employees/employees.routing";
@@ -15,6 +15,7 @@ import { EmployeesService } from "app/shared/services/employees.service";
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         employeesRouting
     ],
